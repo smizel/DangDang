@@ -29,6 +29,6 @@ describe('Login', () => {
     await page.click('button[type="submit"]');
     await page.waitForSelector('.ant-layout-sider h1'); // should display error
     const text = await page.evaluate(() => document.body.innerHTML);
-    expect(text).toContain('<h1>中 研 附 院</h1>');
+    expect(text).toContain('<h1>挡挡美</h1>');
   });
 });

@@ -52,8 +52,8 @@ if (process.env.APP_TYPE === 'site') {
 }
 
 export default {
-  base: '/hospital/', //定义路由的基本路径
-  publicPath: '/hospital/', //定义资源的基本路径
+  // base: '/hospital/', //定义路由的基本路径
+  // publicPath: '/hospital/', //定义资源的基本路径
   history: 'hash',
   // add for transfer to umi
   plugins,
@@ -82,7 +82,7 @@ export default {
   // },
   proxy: {
     '/api': {
-      target: 'http://154.223.135.133:8088/',
+      target: 'http://154.223.135.133:8088/admin/',
       changeOrigin: true,
     },
   },

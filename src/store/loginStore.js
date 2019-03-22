@@ -15,7 +15,7 @@ class loginStore {
       localStorage.setItem('authority', '1');
       localStorage.setItem('token', token);
       message.success('登录成功！');
-      window.location.assign('/hospital/');
+      //window.location.assign('/hospital/');
     } else {
       message.error('用户名或密码错误！');
     }

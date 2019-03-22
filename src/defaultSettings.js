@@ -6,5 +6,5 @@ module.exports = {
   fixedHeader: false, // sticky header
   autoHideHeader: false, // auto hide header
   fixSiderbar: false, // sticky siderbar
-  title: '中 研 附 院',
+  title: '挡挡美',
 };

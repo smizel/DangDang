@@ -10,6 +10,6 @@ describe('Homepage', () => {
       timeout: 5000,
     });
     const text = await page.evaluate(() => document.getElementsByTagName('h1')[0].innerText);
-    expect(text).toContain('中 研 附 院');
+    expect(text).toContain('挡挡美');
   });
 });
