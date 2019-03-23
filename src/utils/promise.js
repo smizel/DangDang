@@ -28,7 +28,7 @@ export const request = (api, method = MethodType.GET, params = {}, config = {}) 
   }
   return new Promise((resolve, reject) => {
     axios({
-      url: api,
+      url: `/api${api}`,
       method,
       [data]: params,
       headers,
@@ -52,7 +52,7 @@ export const request = (api, method = MethodType.GET, params = {}, config = {}) 
 export const requestLogin = (api, method = MethodType.GET, params = {}) => {
   const data = method === 'GET' ? 'params' : 'data';
   return axios({
-    url: api,
+    url: `/api${api}`,
     method,
     [data]: params,
     headers: {

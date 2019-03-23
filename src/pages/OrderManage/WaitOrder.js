@@ -12,7 +12,7 @@ const { Option } = Select;
 class WaitOrder extends Component {
   @action.bound
   componentWillMount() {
-
+    return orderStore.order()
   }
 
   render() {
@@ -30,8 +30,8 @@ class WaitOrder extends Component {
       },
       {
         title: '备注',
-        dataIndex: 'more',
-        key: 'more',
+        dataIndex: 'comment',
+        key: 'comment',
       },
       {
         title: '状态',
@@ -57,16 +57,16 @@ class WaitOrder extends Component {
             >
               通过
             </a>
-            <Divider type="vertical"/>
-            <a
-              onClick={() => {
-                // orderStore.id = key.key;
-                // orderStore.status = '2';
-                // return orderStore.check_order();
-              }}
-            >
-              拒绝
-            </a>
+            {/*<Divider type="vertical"/>*/}
+            {/*<a*/}
+              {/*onClick={() => {*/}
+                {/*// orderStore.id = key.key;*/}
+                {/*// orderStore.status = '2';*/}
+                {/*// return orderStore.check_order();*/}
+              {/*}}*/}
+            {/*>*/}
+              {/*拒绝*/}
+            {/*</a>*/}
           </span>
         ),
       },
@@ -89,7 +89,7 @@ class WaitOrder extends Component {
         <Card style={{ width: '100%' }} title="已审核">
           <Table
             columns={columns}
-            dataSource={showorder}
+            dataSource={orderStore.waitList}
             pagination={{ showTotal: total => `共 ${total} 条数据` }}
           />
         </Card>

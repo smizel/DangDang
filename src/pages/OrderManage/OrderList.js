@@ -32,8 +32,8 @@ class OrderList extends Component {
       },
       {
         title: '备注',
-        dataIndex: 'more',
-        key: 'more',
+        dataIndex: 'comment',
+        key: 'comment',
       },
       {
         title: '状态',
@@ -59,30 +59,21 @@ class OrderList extends Component {
             >
               通过
             </a>
-            <Divider type="vertical"/>
-            <a
-              onClick={() => {
-                // orderStore.id = key.key;
-                // orderStore.status = '2';
-                // return orderStore.check_order();
-              }}
-            >
-              拒绝
-            </a>
+            {/*<Divider type="vertical"/>*/}
+            {/*<a*/}
+              {/*onClick={() => {*/}
+                {/*// orderStore.id = key.key;*/}
+                {/*// orderStore.status = '2';*/}
+                {/*// return orderStore.check_order();*/}
+              {/*}}*/}
+            {/*>*/}
+              {/*拒绝*/}
+            {/*</a>*/}
           </span>
         ),
       },
     ];
 
-
-    const showorder = [
-      {
-        name:"aaa",
-        phone:'12345234523',
-        more:'',
-        tag:['通过','green']
-      }
-    ];
 
 
 
@@ -91,7 +82,7 @@ class OrderList extends Component {
         <Card style={{ width: '100%' }} title="已审核">
           <Table
             columns={columns}
-            dataSource={showorder}
+            dataSource={orderStore.orderList}
             pagination={{ showTotal: total => `共 ${total} 条数据` }}
           />
         </Card>

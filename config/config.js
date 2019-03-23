@@ -82,7 +82,7 @@ export default {
   // },
   proxy: {
     '/api': {
-      target: 'http://154.223.135.133:8088/admin/',
+      target: 'http://newhospital.weinuoabc.com',
       changeOrigin: true,
     },
   },
